@@ -5,7 +5,7 @@
     <p>Click on 'End Day' to begin a new Day!</p>
     <hr class="home__breakline" />
     <h2 class="home__smallHeader">
-      Your funds: {{ this.$store.state.portfolio.funds }} $
+      Your funds: ${{ this.$store.state.portfolio.funds }}
     </h2>
   </div>
 </template>
