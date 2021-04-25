@@ -8,7 +8,9 @@
     <div class="navbar__list">
       <p>End day</p>
       <p>Save & Load</p>
-      <p><b>Funds: 2222$</b></p>
+      <p>
+        <b>Funds: {{ this.$store.state.portfolio.funds }} $</b>
+      </p>
     </div>
   </div>
 </template>
@@ -20,7 +22,7 @@ export default class Navbar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/variables.scss';
+@import "../styles/variables.scss";
 .navbar {
   background-color: red;
   padding: $spacing-unit / 2;
