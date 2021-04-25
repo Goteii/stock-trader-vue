@@ -1,15 +1,15 @@
 <template>
   <div class="navbar">
     <div class="navbar__list">
-      <p class="navbar__logo"><b>Stock Trader</b></p>
-      <p>Portfolio</p>
-      <p>Stocks</p>
+      <router-link to="/" class="navbar__logo"><b>Stock Trader</b></router-link>
+      <p class="navbar__value">Portfolio</p>
+      <router-link to="/stocks" class="navbar__value">Stocks</router-link>
     </div>
     <div class="navbar__list">
-      <p>End day</p>
-      <p>Save & Load</p>
-      <p>
-        <b>Funds: {{ this.$store.state.portfolio.funds }} $</b>
+      <p class="navbar__value">End day</p>
+      <p class="navbar__value">Save & Load</p>
+      <p class="navbar__value">
+        <b>Funds: ${{ this.$store.state.portfolio.funds }}</b>
       </p>
     </div>
   </div>
@@ -40,11 +40,17 @@ export default class Navbar extends Vue {}
 }
 .navbar__logo {
   font-size: $font-size-regular2;
-}
-p {
   margin: $spacing-unit;
   align-self: center;
   color: rgb(83, 83, 83);
   cursor: pointer;
+  text-decoration: none;
+}
+.navbar__value {
+  margin: $spacing-unit;
+  align-self: center;
+  color: rgb(83, 83, 83);
+  cursor: pointer;
+  text-decoration: none;
 }
 </style>
